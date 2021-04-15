@@ -1,8 +1,10 @@
-from django.db import models
+from djongo import models
 
 
 class Produto(models.Model):
-    cod = models.IntegerField()
-    descricao = models.CharField(max_length=100)
+    nome = models.CharField(max_length=255)
     preco = models.FloatField()
-    estoque = models.IntegerField()
+    estoque = models.IntegerField(default=0)
+
+    def __str__(self):
+        return str(self.id) + ' - ' + self.nome

@@ -15,9 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from lazy_loading.views import index
+from lazy_loading.views import index, listaProdutos
 
 urlpatterns = [
+    path('', listaProdutos),
     path('<int:param>', index),
     path('admin/', admin.site.urls),
 ]
