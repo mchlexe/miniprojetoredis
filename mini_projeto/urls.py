@@ -14,11 +14,9 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
-from lazy_loading.views import index, listaProdutos
+from django.urls import path, include
 
 urlpatterns = [
-    path('', listaProdutos),
-    path('<int:param>', index),
     path('admin/', admin.site.urls),
+    path('', include('lazy_loading.urls'))
 ]

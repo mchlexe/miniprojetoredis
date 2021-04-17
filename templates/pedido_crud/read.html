@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Pedidos</h1>
+    <h3><a href="{% url 'pedidoCreate' %}">+ Criar novo</a></h3>
+    <ul>
+        {% for pedido in pedidos_list %}
+        <li><a href="{% url 'pedidoDetail' pedido.id %}">Pedido #{{ pedido.id }} - Cliente: {{ pedido.cliente.nome }} - Total: R$ {{ pedido.total }}</a></li>
+        {% endfor %}
+
+    </ul>
+{% endblock content %}

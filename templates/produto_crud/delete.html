@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>- Remover</h1>
+<form action="" method="post">{% csrf_token %}
+    <p>Tem certeza que deseja apagar "{{ produto.id }} - {{ produto.nome }}"?</p>
+    <input type="submit" value="Confirmar" />
+</form>
+
+{% endblock content %}

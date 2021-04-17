@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Editar Produto {{ produto.id }}</h1>
+    <form action="" method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Atualizar" />
+    </form>
+
+    <h4><a href="{% url 'produtoDelete' produto.pk %}">- Remover</a></h4>
+{% endblock content %}

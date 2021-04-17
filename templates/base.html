@@ -6,7 +6,8 @@
 </head>
 <body>
     <header>
-        <a href="{% url 'home' %}">Home</a> | <a href="{% url 'produtos' %}">Relatórios</a>
+        <a href="{% url 'index' %}">Home</a> | <a href="{% url 'produtos' %}">Produtos</a> | <a href="{% url 'clientes' %}">Clientes</a> | <a href="{% url 'pedidos' %}">Pedidos</a>
+
     </header>
 
     {% block content %}
